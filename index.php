@@ -12,7 +12,9 @@ $sortedArticles = sortArticles($articles);
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title></title>
+        <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+        <link rel="stylesheet" href="/style.css">
+        <title>Delorean Daily</title>
     </head>
     <body>
 
@@ -34,14 +36,15 @@ $sortedArticles = sortArticles($articles);
                         <?php echo getAuthorNameFromId($article['author_id'], $authors) ?>
                     </p>
 
-                    <p>
+                    <p class="date">
                         <?php echo $article['published_date'] ?>
                     </p>
 
-                    <p>
-                        <?php echo $article['likes']; ?>
-                    </p>
                 </div>
+
+                <p>
+                    <?php echo $article['likes']; ?> Likes
+                </p>
 
             </article>
 

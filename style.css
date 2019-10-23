@@ -1,0 +1,7 @@
+.nameAndDate {
+  display: flex;
+}
+
+.date {
+  margin-left: 10px;
+}
