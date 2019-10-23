@@ -2,6 +2,22 @@
 
 declare(strict_types=1);
 
+function daysAgo(string $publishedDate): string
+{
+
+    $currentDate = new DateTime(date('Ymd'));
+
+    $date = new DateTime($publishedDate);
+
+    $diff=$date->diff($currentDate);
+
+    $days = date_interval_format($diff, '%a');
+
+    return $days;
+
+}
+
+
 /**
  * Sorts all articles by date and returns an array with the newest article first at index 0.
  *
@@ -18,11 +34,9 @@ function sortArticles(array $articles): array
         //inner loop, adds articles to result array by order of days old, starting with 0.
         foreach ($articles as $article) {
 
-            $currentDate = date('Ymd');
-            $publishedDate = $article['published_date'];
-            $daysOld = $currentDate - $publishedDate;
+            $daysOld = daysAgo($article['published_date']);
 
-            if ($daysOld === $i) {
+            if ($daysOld == $i) {
                 $result[] = $article;
             }
 
