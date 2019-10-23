@@ -7,71 +7,71 @@ $articles = [
         'title' => 'Hej',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
-        'published_date' => '20191024',
+        'published_date' => '20191011',
         'likes' => 4
     ],
     [
         'title' => 'Hej2',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
-        'published_date' => '20191023',
-        'likes' => 2
+        'published_date' => '20191019',
+        'likes' => 7
     ],
     [
         'title' => 'Hej2',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
         'published_date' => '20190918',
-        'likes' => 2
+        'likes' => 32
     ],
     [
         'title' => 'Hej2',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
         'published_date' => '20191014',
-        'likes' => 2
+        'likes' => 41
     ],
     [
         'title' => 'Hej2',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
         'published_date' => '20191005',
-        'likes' => 2
+        'likes' => 17
     ],
     [
         'title' => 'Hej2',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
         'published_date' => '20191023',
-        'likes' => 2
+        'likes' => 211
     ],
     [
         'title' => 'Hej2',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
         'published_date' => '20190923',
-        'likes' => 2
+        'likes' => 293
     ],
     [
         'title' => 'Hej2',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
         'published_date' => '20191001',
-        'likes' => 2
+        'likes' => 27
     ],
     [
         'title' => 'Hej2',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
         'published_date' => '20190822',
-        'likes' => 2
+        'likes' => 143
     ],
     [
         'title' => 'Hej2',
         'content' => 'blabla dblebkeo aeofoaejf aeifo aoefboabefob afbnaoefbobae aeofioef',
         'author_id' => 1,
         'published_date' => '20190927',
-        'likes' => 2
+        'likes' => 11
     ]
 ];
 
