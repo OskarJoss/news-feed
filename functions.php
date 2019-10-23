@@ -2,25 +2,35 @@
 
 declare(strict_types=1);
 
-function daysAgo(string $publishedDate): string
+/**
+ * Takes a date and returns how many days ago it was from the current date
+ *
+ * @param string $date
+ * @return string
+ */
+function daysAgo(string $date): string
 {
 
+    //create a dateTime object with the current date
     $currentDate = new DateTime(date('Ymd'));
 
-    $date = new DateTime($publishedDate);
+    //create a dateTime object with past date to compare with
+    $publishedDate = new DateTime($date);
 
-    $diff=$date->diff($currentDate);
+    //compare the difference
+    $difference = $publishedDate->diff($currentDate);
 
-    $days = date_interval_format($diff, '%a');
+    //format it to total number of days and string
+    $stringDaysAgo = $difference->format('%a');
 
-    return $days;
+    return $stringDaysAgo;
 
 }
 
 
 /**
- * Sorts all articles by date and returns an array with the newest article first at index 0.
- *
+ * Sorts all articles by date and returns an array with the newest article first at index 0,
+ * only takes the last 100 days.
  * @param array $articles
  * @return array
  */
