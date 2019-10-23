@@ -1,9 +1,10 @@
 <?php
 
-// This is the file where you can keep your HTML markup. We should always try to
-// keep us much logic out of the HTML as possible. Put the PHP logic in the top
-// of the files containing HTML or even better; in another PHP file altogether.
+require __DIR__.'/data.php';
+require __DIR__.'/functions.php';
 
+
+$sortedArticles = sortArticles($articles);
 ?>
 
 <!DOCTYPE html>
@@ -14,5 +15,37 @@
         <title></title>
     </head>
     <body>
+
+        <?php foreach ($sortedArticles as $article): ?>
+
+            <article>
+
+                <h1>
+                    <?php echo $article['title'] ?>
+                </h1>
+
+                <p>
+                    <?php echo $article['content'] ?>
+                </p>
+
+                <div class="nameAndDate">
+
+                    <p>
+                        <?php echo getAuthorNameFromId($article['author_id'], $authors) ?>
+                    </p>
+
+                    <p>
+                        <?php echo $article['published_date'] ?>
+                    </p>
+
+                    <p>
+                        <?php echo $article['likes']; ?>
+                    </p>
+                </div>
+
+            </article>
+
+        <?php endforeach; ?>
+
     </body>
 </html>

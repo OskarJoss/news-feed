@@ -32,3 +32,18 @@ function sortArticles(array $articles): array
     return $result;
 }
 
+/**
+ * Get authors full name from authors array by inserting author_id from articles array.
+ *
+ * @param integer $id
+ * @param array $authors
+ * @return string
+ */
+function getAuthorNameFromId(int $id, array $authors): string
+{
+    foreach ($authors as $author) {
+        if ($id === $author['id']) {
+            return $author['full_name'];
+        }
+    }
+}
