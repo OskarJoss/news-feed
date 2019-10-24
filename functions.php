@@ -92,3 +92,18 @@ function formatToDaysAgo(string $date): string
 
    return $daysAgo . ' days ago';
 }
+
+/**
+ * Formats date from YYYYmmdd to dd 'month as text' YYYY.
+ *
+ * @param string $date
+ * @return string
+ */
+function formatDate(string $date): string
+{
+    $dateTimeObject = new DateTime($date);
+
+    $formattedDate = $dateTimeObject->format('d F Y');
+
+    return $formattedDate;
+}

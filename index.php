@@ -49,7 +49,7 @@ $sortedArticles = sortArticles($articles);
                     </p>
 
                     <p class="date">
-                        <?php echo $publishedDate; ?>
+                        <?php echo formatDate($publishedDate); ?>
                     </p>
 
                 </div>
