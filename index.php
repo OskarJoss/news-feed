@@ -45,7 +45,7 @@ $sortedArticles = sortArticles($articles);
                 <div class="nameAndDate">
 
                     <p>
-                        <?php echo getAuthorNameFromId($authorId, $authors); ?>
+                        Author: <?php echo getAuthorNameFromId($authorId, $authors); ?>
                     </p>
 
                     <p class="date">
@@ -54,9 +54,11 @@ $sortedArticles = sortArticles($articles);
 
                 </div>
 
-                <p>
-                    <?php echo $likes; ?> Likes
-                </p>
+                <div class="likes">
+                    <p>
+                        <?php echo $likes; ?> Likes
+                    </p>
+                </div>
 
             </article>
 

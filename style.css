@@ -1,5 +1,12 @@
+body {
+  padding: 20px;
+}
+
 .nameAndDate {
   display: flex;
+  justify-content: space-between;
+
+  font-style: italic;
 }
 
 .date {
@@ -8,4 +15,8 @@
 
 .published {
   font-style: italic;
+}
+
+.likes {
+  text-align: end;
 }
