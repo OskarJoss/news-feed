@@ -96,7 +96,7 @@ $authors = [
     ],
     [
         'id' => 3,
-        'full_name' => 'Doc'
+        'full_name' => 'Doc Brown'
     ],
     [
         'id' => 4,
