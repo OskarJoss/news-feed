@@ -5,3 +5,7 @@
 .date {
   margin-left: 10px;
 }
+
+.published {
+  font-style: italic;
+}

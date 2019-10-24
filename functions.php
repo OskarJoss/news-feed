@@ -8,7 +8,7 @@ declare(strict_types=1);
  * @param string $date
  * @return string
  */
-function daysAgo(string $date): string
+function getDaysAgo(string $date): string
 {
 
     //create a DateTime object with the current date
@@ -21,9 +21,9 @@ function daysAgo(string $date): string
     $difference = $publishedDate->diff($currentDate);
 
     //format DateIntervall to total number of days and string
-    $stringDaysAgo = $difference->format('%a');
+    $stringgetDaysAgo = $difference->format('%a');
 
-    return $stringDaysAgo;
+    return $stringgetDaysAgo;
 
 }
 
@@ -45,7 +45,7 @@ function sortArticles(array $articles): array
         foreach ($articles as $article) {
 
             //how many days old is the current article
-            $daysOld = daysAgo($article['published_date']);
+            $daysOld = getDaysAgo($article['published_date']);
 
             //comparing string number to int number
             if ($daysOld == $i) {
@@ -72,4 +72,23 @@ function getAuthorNameFromId(int $id, array $authors): string
             return $author['full_name'];
         }
     }
+}
+
+/**
+ * Formats date to days ago, 0 = 'today', 1 = 'yesterday', the rest = 'X days ago'.
+ *
+ * @param string $date
+ * @return string
+ */
+function formatToDaysAgo(string $date): string
+{
+   $daysAgo = getDaysAgo($date);
+
+   if ($daysAgo === '0') {
+       return 'today';
+   } elseif ($daysAgo === '1') {
+       return 'yesterday';
+   }
+
+   return $daysAgo . ' days ago';
 }

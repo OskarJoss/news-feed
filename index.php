@@ -34,6 +34,10 @@ $sortedArticles = sortArticles($articles);
                     <?php echo $title; ?>
                 </h1>
 
+                <p class="published">
+                    Published <?php echo formatToDaysAgo($publishedDate) ?>
+                </p>
+
                 <p>
                     <?php echo $content; ?>
                 </p>
