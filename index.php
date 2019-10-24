@@ -20,30 +20,38 @@ $sortedArticles = sortArticles($articles);
 
         <?php foreach ($sortedArticles as $article): ?>
 
+            <?php
+                $title = $article['title'];
+                $content = $article['content'];
+                $authorId = $article['author_id'];
+                $publishedDate = $article['published_date'];
+                $likes = $article['likes'];
+            ?>
+
             <article>
 
                 <h1>
-                    <?php echo $article['title'] ?>
+                    <?php echo $title; ?>
                 </h1>
 
                 <p>
-                    <?php echo $article['content'] ?>
+                    <?php echo $content; ?>
                 </p>
 
                 <div class="nameAndDate">
 
                     <p>
-                        <?php echo getAuthorNameFromId($article['author_id'], $authors) ?>
+                        <?php echo getAuthorNameFromId($authorId, $authors); ?>
                     </p>
 
                     <p class="date">
-                        <?php echo $article['published_date'] ?>
+                        <?php echo $publishedDate; ?>
                     </p>
 
                 </div>
 
                 <p>
-                    <?php echo $article['likes']; ?> Likes
+                    <?php echo $likes; ?> Likes
                 </p>
 
             </article>
