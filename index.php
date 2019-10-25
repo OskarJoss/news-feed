@@ -20,67 +20,69 @@ $sortedArticles = sortArticles($articles);
 
         <div class="articleBox">
 
-            <?php foreach ($sortedArticles as $article): ?>
+            <div class="contentBox">
 
-                <?php
-                    $title = $article['title'];
-                    $content = $article['content'];
-                    $authorId = $article['author_id'];
-                    $publishedDate = $article['published_date'];
-                    $likes = $article['likes'];
-                    $image = $article['image'];
-                    $imageText = $article['image_text'];
-                ?>
+                <?php foreach ($sortedArticles as $article): ?>
 
-                <article>
+                    <?php
+                        $title = $article['title'];
+                        $content = $article['content'];
+                        $authorId = $article['author_id'];
+                        $publishedDate = $article['published_date'];
+                        $likes = $article['likes'];
+                        $image = $article['image'];
+                        $imageText = $article['image_text'];
+                    ?>
 
-                    <h1>
-                        <?php echo $title; ?>
-                    </h1>
+                    <article>
 
-                    <div class="articleInfoBox">
+                        <h1><?php echo $title; ?></h1>
 
-                        <p class="published">
-                            Published <?php echo formatToDaysAgo($publishedDate) ?>
-                        </p>
+                        <div class="articleInfoBox">
 
-                        <div class="likeBox">
-
-                            <p>
-                                <?php echo $likes; ?>
+                            <p class="published">
+                                Published <?php echo formatToDaysAgo($publishedDate) ?>
                             </p>
 
-                            <img class="likeSymbol" src="/images/icons/like.svg" alt="Like symbol">
+                            <div class="likeBox">
+
+                                <p>
+                                    <?php echo $likes; ?>
+                                </p>
+
+                                <img class="likeSymbol" src="/images/icons/like.svg" alt="Like symbol">
+
+                            </div>
 
                         </div>
 
-                    </div>
+                        <div class="articleImage" style="background-image: url(<?php echo $image?>)"></div>
 
-                    <div class="articleImage" style="background-image: url(<?php echo $image?>)"></div>
-
-                    <p>
-                        <?php echo $content; ?>
-                    </p>
-
-                    <div class="nameAndDateBox">
-
-                        <div class="authorBox">
-                            <img class="profilePicture" src="<?php echo getAuthorImageFromId($authorId, $authors) ?>" alt="Image of author">
-
-                            <p>
-                                Author: <?php echo getAuthorNameFromId($authorId, $authors); ?>
-                            </p>
-                        </div>
-
-                        <p class="date">
-                            <?php echo formatDate($publishedDate); ?>
+                        <p>
+                            <?php echo $content; ?>
                         </p>
 
-                    </div>
+                        <div class="nameAndDateBox">
 
-                </article>
+                            <div class="authorBox">
+                                <img class="profilePicture" src="<?php echo getAuthorImageFromId($authorId, $authors) ?>" alt="Image of author">
 
-            <?php endforeach; ?>
+                                <p>
+                                    Author: <?php echo getAuthorNameFromId($authorId, $authors); ?>
+                                </p>
+                            </div>
+
+                            <p class="date">
+                                <?php echo formatDate($publishedDate); ?>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                <?php endforeach; ?>
+
+            </div>
 
         </div>
 

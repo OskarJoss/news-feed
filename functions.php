@@ -21,9 +21,9 @@ function getDaysAgo(string $date): string
     $difference = $publishedDate->diff($currentDate);
 
     //format DateIntervall to total number of days and string
-    $stringgetDaysAgo = $difference->format('%a');
+    $stringGetDaysAgo = $difference->format('%a');
 
-    return $stringgetDaysAgo;
+    return $stringGetDaysAgo;
 
 }
 
