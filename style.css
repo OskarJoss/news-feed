@@ -1,6 +1,20 @@
-body {
+nav {
+  margin: 0;
   padding: 10px;
+  background-color: #7a9792;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
+
+nav h1 {
+  margin: 0;
+  font-size: 50px;
+  color: #820000;
+  font-family: 'Righteous', cursive;
+}
+
 
 article h1 {
   margin-bottom: 0;
@@ -9,6 +23,7 @@ article h1 {
 .articleBox {
   position: relative;
   padding: 20px;
+  margin: 0 10px;
   background-color: #f8f8f8;
 
 }
@@ -48,6 +63,13 @@ article h1 {
   background-position: center;
 }
 
+.imageText {
+  margin: 0;
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+}
+
 .nameAndDateBox {
   display: flex;
   justify-content: space-between;
@@ -80,13 +102,14 @@ article h1 {
 }
 
 @media only screen and (min-width: 700px) {
+  .contentBox {
+    width: 640px;
+  }
+
   .articleImage {
     height: 384px;
     width: 640px;
     padding-top: 0;
-  }
-  .contentBox {
-    width: 640px;
   }
 }
 
@@ -95,6 +118,14 @@ article h1 {
     width: 800px;
     margin-left: 10vw;
     padding: 30px;
+  }
+
+  .articleContent {
+    font-size: 18px;
+  }
+
+  nav h1 {
+    font-size: 70px;
   }
 }
 

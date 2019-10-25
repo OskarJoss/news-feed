@@ -14,9 +14,16 @@ $sortedArticles = sortArticles($articles);
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
         <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
         <title>Delorean Daily</title>
     </head>
     <body>
+
+        <nav>
+
+            <h1>DeLorean Daily</h1>
+
+        </nav>
 
         <div class="articleBox">
 
@@ -54,7 +61,9 @@ $sortedArticles = sortArticles($articles);
 
                         <div class="articleImage" style="background-image: url(<?php echo $image?>)"></div>
 
-                        <p><?php echo $content; ?></p>
+                        <p class="imageText"><?php echo $imageText; ?></p>
+
+                        <p class="articleContent"><?php echo $content; ?></p>
 
                         <div class="nameAndDateBox">
 
