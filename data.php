@@ -9,7 +9,9 @@ $articles = [
         Of course, the Enchantment Under The Sea Dance they're supposed to go to this, that's where they kiss for the first time. You're gonna break his arm. Biff, leave him alone. Let him go. Let him go. What, right here right now in the cafeteria? What is she said no? I don't know if I could take that kind of rejection. Besides, I think she'd rather go with somebody else. Yeah, well, how about my homework, McFly? Now, Biff, um, can I assume that your insurance is gonna pay for the damage?",
         'author_id' => 1,
         'published_date' => '20191011',
-        'likes' => 4
+        'likes' => 4,
+        'image' => 'images/articles/article1.jpeg',
+        'image_text' => "Ah, where're my pants?"
     ],
     [
         'title' => 'I just wanna use the phone.',
@@ -17,7 +19,9 @@ $articles = [
         Alright, okay. Alright, there she is, George. Just go in there and invite her. Save the clock tower, save the clock tower. Mayor Wilson is sponsoring an initiative to replace that clock. Thirty years ago, lightning struck that clock tower and the clock hasn't run since. We at the Hill Valley Preservation Society think it should be preserved exactly the way it is as part of our history and heritage. Uh, yeah. What, what, ma? Check out that four by four. That is hot. Someday, Jennifer, someday. Wouldn't it be great to take that truck up to the lake. Throw a couple of sleeping bags in the back. Lie out under the stars.",
         'author_id' => 1,
         'published_date' => '20191019',
-        'likes' => 7
+        'likes' => 7,
+        'image' => 'images/articles/article2.jpeg',
+        'image_text' => "Whoa, whoa, kid, kid, stop, stop, stop, stop."
     ],
     [
         'title' => 'Are those my clocks I hear?',
@@ -25,7 +29,9 @@ $articles = [
         Whoa, wait a minute, Doc, are you telling me that my mother has got the hots for me? Indeed I will, roll em. I, Doctor Emmett Brown, am about to embark on an historic journey. What have I been thinking of, I almost forgot to bring some extra plutonium. How did I ever expect to get back, one pallet one trip I must be out of my mind. What is it Einy? Oh my god, they found me, I don't know how but they found me. Run for it, Marty. Marty, you seem so nervous, is something wrong? Indeed I will, roll em. I, Doctor Emmett Brown, am about to embark on an historic journey. What have I been thinking of, I almost forgot to bring some extra plutonium. How did I ever expect to get back, one pallet one trip I must be out of my mind. What is it Einy? Oh my god, they found me, I don't know how but they found me. Run for it, Marty. Yeah, I'll keep that in mind.",
         'author_id' => 2,
         'published_date' => '20190918',
-        'likes' => 32
+        'likes' => 32,
+        'image' => 'images/articles/article3.jpeg',
+        'image_text' => "Marty, why are you so nervous?"
     ],
     [
         'title' => 'Last night, Darth Vader came down from planet Vulcan. And he told me that if I didn\'t take Lorraine, that he\'d melt my brain.',
@@ -33,7 +39,9 @@ $articles = [
         The car, Dad, I mean He wrecked it, totaled it. I needed that car tomorrow night, Dad, I mean do you have any idea how important this was, do you have any clue? Listen, this is very important, I forgot my video camera, could you stop by my place and pick it up on your way to the mall? Just turn around, McFly, and walk away. Are you deaf, McFly? Close the door and beat it. Hi, it's really a pleasure to meet you. Hey beat it, spook, this don't concern you.",
         'author_id' => 2,
         'published_date' => '20191014',
-        'likes' => 41
+        'likes' => 41,
+        'image' => 'images/articles/article4.jpeg',
+        'image_text' => "Right check, Doc."
     ],
     [
         'title' => 'Marty. Marty. Marty.',
@@ -41,7 +49,9 @@ $articles = [
         That ain't no airplane, look. I'm gonna ram him. Alright, alright, okay McFly, get a grip on yourself. It's all a dream. Just a very intense dream. Woh, hey, listen, you gotta help me. You broke it. Wow, look at him go. What did you say?",
         'author_id' => 3,
         'published_date' => '20191005',
-        'likes' => 17
+        'likes' => 17,
+        'image' => 'images/articles/article5.jpeg',
+        'image_text' => "You wanna a Pepsi, pall, you're gonna pay for it."
     ],
     [
         'title' => 'He laid out Biff in one punch. I never knew he had it in him. He never stood up to Biff in his life.',
@@ -49,7 +59,9 @@ $articles = [
         The way I see it, if you're gonna build a time machine into a car why not do it with some style. Besides, the stainless, steel construction made the flux dispersal- look out. You bet. Uh, no, no, no, no. What are you looking at, butt-head? Doc, you gotta help me. you were the only one who knows how your time machine works. Erased from existence.",
         'author_id' => 3,
         'published_date' => '20191023',
-        'likes' => 211
+        'likes' => 211,
+        'image' => 'images/articles/article9.jpeg',
+        'image_text' => "About 30 years, it's a nice round number."
     ],
     [
         'title' => 'Oh no, don\'t touch that. That\'s some new specialized weather sensing equipment.',
@@ -57,7 +69,9 @@ $articles = [
         This is more serious than I thought. Apparently your mother is amorously infatuated with you instead of your father. Ahh. Yeah I know, If you put your mind to it you could accomplish anything. Thank god I still got my hair. What on Earth is that thing I'm wearing? He's a very strange young man.",
         'author_id' => 4,
         'published_date' => '20190923',
-        'likes' => 293
+        'likes' => 293,
+        'image' => 'images/articles/article6.jpeg',
+        'image_text' => "When could weathermen predict the weather, let alone the future."
     ],
     [
         'title' => 'Looks like a airplane, without wings.',
@@ -65,7 +79,9 @@ $articles = [
         Marty, don't go this way. Strickland's looking for you. If you're caught it'll be four tardies in a row. Well, safe and sound, now, n good old 1955. I don't like her, Marty. Any girl who calls a boy is just asking for trouble. Science Fiction Theater. Why that's me, look at me, I'm an old man.",
         'author_id' => 4,
         'published_date' => '20191001',
-        'likes' => 27
+        'likes' => 27,
+        'image' => 'images/articles/article10.jpeg',
+        'image_text' => "The storm."
     ],
     [
         'title' => 'Hey George, heard you laid out Biff, nice going.',
@@ -73,7 +89,9 @@ $articles = [
         Good evening, I'm Doctor Emmet Brown, I'm standing here on the parking lot of- That's right, twenty five years into the future. I've always dreamed on seeing the future, looking beyond my years, seeing the progress of mankind. I'll also be able to see who wins the next twenty-five world series. Oh, just a little weather experiment. The keys are in the trunk. No, fine, no , good, fine, good.",
         'author_id' => 5,
         'published_date' => '20190822',
-        'likes' => 143
+        'likes' => 143,
+        'image' => 'images/articles/article7.jpeg',
+        'image_text' => "No, why, what's a matter?"
     ],
     [
         'title' => 'Doc, she didn\'t even look at him.',
@@ -81,29 +99,36 @@ $articles = [
         I need fuel. Go ahead, quick, get in the car. Yeah, he's right here. Hey man, the dance is over. Unless you know someone else who could play the guitar. Alright, I'm ready. Ah, honey, your first novel.",
         'author_id' => 5,
         'published_date' => '20190927',
-        'likes' => 11
+        'likes' => 11,
+        'image' => 'images/articles/article8.jpeg',
+        'image_text' => "You heard her she said get your meat hooks, off, uh please."
     ]
 ];
 
 $authors = [
     [
         'id' => 1,
-        'full_name' => 'Kalle Anka'
+        'full_name' => 'Kalle Anka',
+        'profile_picture' => '/images/authors/KalleAnka.jpeg'
     ],
     [
         'id' => 2,
-        'full_name' => 'Marty McFly'
+        'full_name' => 'Marty McFly',
+        'profile_picture' => '/images/authors/MartyMcfly.jpeg'
     ],
     [
         'id' => 3,
-        'full_name' => 'Doc Brown'
+        'full_name' => 'Doc Brown',
+        'profile_picture' => '/images/authors/DocBrown.jpeg'
     ],
     [
         'id' => 4,
-        'full_name' => 'Janis Joplin'
+        'full_name' => 'Janis Joplin',
+        'profile_picture' => '/images/authors/JanisJoplin.jpeg'
     ],
     [
         'id' => 5,
-        'full_name' => 'Jimi Hendrix'
+        'full_name' => 'Jimi Hendrix',
+        'profile_picture' => '/images/authors/JimiHendrix.jpeg'
     ]
 ];
