@@ -26,6 +26,8 @@ $sortedArticles = sortArticles($articles);
                 $authorId = $article['author_id'];
                 $publishedDate = $article['published_date'];
                 $likes = $article['likes'];
+                $image = $article['image'];
+                $imageText = $article['image_text'];
             ?>
 
             <article>
@@ -34,7 +36,7 @@ $sortedArticles = sortArticles($articles);
                     <?php echo $title; ?>
                 </h1>
 
-                <div class="articleInfo">
+                <div class="articleInfoBox">
 
                     <p class="published">
                         Published <?php echo formatToDaysAgo($publishedDate) ?>
@@ -58,11 +60,15 @@ $sortedArticles = sortArticles($articles);
                     <?php echo $content; ?>
                 </p>
 
-                <div class="nameAndDate">
+                <div class="nameAndDateBox">
 
-                    <p>
-                        Author: <?php echo getAuthorNameFromId($authorId, $authors); ?>
-                    </p>
+                    <div class="authorBox">
+                        <img class="profilePicture" src="<?php echo getAuthorImageFromId($authorId, $authors) ?>" alt="Image of author">
+
+                        <p>
+                            Author: <?php echo getAuthorNameFromId($authorId, $authors); ?>
+                        </p>
+                    </div>
 
                     <p class="date">
                         <?php echo formatDate($publishedDate); ?>

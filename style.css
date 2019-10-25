@@ -2,14 +2,22 @@ body {
   padding: 20px;
 }
 
-.articleInfo {
+.articleInfoBox {
   display: flex;
   justify-content: space-between;
+}
+
+.published {
+  font-style: italic;
 }
 
 .likeBox {
   display: flex;
   align-items: center;
+}
+
+.likeBox p {
+  color: mediumblue;
 }
 
 .likeSymbol {
@@ -21,20 +29,38 @@ body {
 
 }
 
-.nameAndDate {
+.nameAndDateBox {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 
   font-style: italic;
+}
+
+.nameAndDateBox p {
+  margin: 0;
+}
+
+.authorBox {
+  display: flex;
+  align-items: flex-end;
+}
+
+.authorBox p {
+  margin: 0 0 0 5px;
+}
+
+.profilePicture {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
 
 .date {
   margin-left: 10px;
 }
 
-.published {
-  font-style: italic;
-}
+
 
 img {
   width: calc(100vw - 40px);
