@@ -74,6 +74,15 @@ function getAuthorNameFromId(int $id, array $authors): string
     }
 }
 
+function getAuthorImageFromId(int $id, array $authors): string
+{
+    foreach ($authors as $author) {
+        if ($id === $author['id']) {
+            return $author['profile_picture'];
+        }
+    }
+}
+
 /**
  * Formats date to days ago, 0 = 'today', 1 = 'yesterday', the rest = 'X days ago'.
  *
