@@ -40,15 +40,11 @@ $sortedArticles = sortArticles($articles);
 
                         <div class="articleInfoBox">
 
-                            <p class="published">
-                                Published <?php echo formatToDaysAgo($publishedDate) ?>
-                            </p>
+                            <p class="published">Published <?php echo formatToDaysAgo($publishedDate) ?></p>
 
                             <div class="likeBox">
 
-                                <p>
-                                    <?php echo $likes; ?>
-                                </p>
+                                <p><?php echo $likes; ?></p>
 
                                 <img class="likeSymbol" src="/images/icons/like.svg" alt="Like symbol">
 
@@ -58,23 +54,19 @@ $sortedArticles = sortArticles($articles);
 
                         <div class="articleImage" style="background-image: url(<?php echo $image?>)"></div>
 
-                        <p>
-                            <?php echo $content; ?>
-                        </p>
+                        <p><?php echo $content; ?></p>
 
                         <div class="nameAndDateBox">
 
                             <div class="authorBox">
+
                                 <img class="profilePicture" src="<?php echo getAuthorImageFromId($authorId, $authors) ?>" alt="Image of author">
 
-                                <p>
-                                    Author: <?php echo getAuthorNameFromId($authorId, $authors); ?>
-                                </p>
+                                <p>Author: <?php echo getAuthorNameFromId($authorId, $authors); ?></p>
+
                             </div>
 
-                            <p class="date">
-                                <?php echo formatDate($publishedDate); ?>
-                            </p>
+                            <p class="date"><?php echo formatDate($publishedDate); ?></p>
 
                         </div>
 
