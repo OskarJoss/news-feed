@@ -34,9 +34,25 @@ $sortedArticles = sortArticles($articles);
                     <?php echo $title; ?>
                 </h1>
 
-                <p class="published">
-                    Published <?php echo formatToDaysAgo($publishedDate) ?>
-                </p>
+                <div class="articleInfo">
+
+                    <p class="published">
+                        Published <?php echo formatToDaysAgo($publishedDate) ?>
+                    </p>
+
+                    <div class="likeBox">
+
+                        <p>
+                            <?php echo $likes; ?>
+                        </p>
+
+                        <img class="likeSymbol" src="/images/icons/like.svg" alt="Like symbol">
+
+                    </div>
+
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1571865577910-3d260b5e7cb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="bild">
 
                 <p>
                     <?php echo $content; ?>
@@ -52,12 +68,6 @@ $sortedArticles = sortArticles($articles);
                         <?php echo formatDate($publishedDate); ?>
                     </p>
 
-                </div>
-
-                <div class="likes">
-                    <p>
-                        <?php echo $likes; ?> Likes
-                    </p>
                 </div>
 
             </article>

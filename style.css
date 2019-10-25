@@ -2,6 +2,25 @@ body {
   padding: 20px;
 }
 
+.articleInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.likeBox {
+  display: flex;
+  align-items: center;
+}
+
+.likeSymbol {
+  height: 15px;
+  width: 15px;
+
+  margin-bottom: 2px;
+  margin-left: 2px;
+
+}
+
 .nameAndDate {
   display: flex;
   justify-content: space-between;
@@ -17,6 +36,6 @@ body {
   font-style: italic;
 }
 
-.likes {
-  text-align: end;
+img {
+  width: calc(100vw - 40px);
 }
