@@ -40,7 +40,7 @@ $articles = [
         'author_id' => 2,
         'published_date' => '20191014',
         'likes' => 41,
-        'image' => 'images/articles/article4.jpeg',
+        'image' => 'images/articles/article4.png',
         'image_text' => "Right check, Doc."
     ],
     [
