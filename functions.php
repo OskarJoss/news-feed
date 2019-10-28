@@ -68,7 +68,7 @@ function sortArticles(array $articles): array
 function getAuthorNameFromId(int $id, array $authors): string
 {
     foreach ($authors as $author) {
-        if ($id === $author['id']) {
+        if ($id == $author['id']) {
             return $author['full_name'];
         }
     }
@@ -77,7 +77,7 @@ function getAuthorNameFromId(int $id, array $authors): string
 function getAuthorImageFromId(int $id, array $authors): string
 {
     foreach ($authors as $author) {
-        if ($id === $author['id']) {
+        if ($id == $author['id']) {
             return $author['profile_picture'];
         }
     }
