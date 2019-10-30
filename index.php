@@ -1,10 +1,13 @@
 <?php
 
-require __DIR__.'/data.php';
 require __DIR__.'/functions.php';
 
+$pdo = new PDO('sqlite:newsfeed.db');
 
-$sortedArticles = sortArticles($articles);
+$getArticles = $pdo->query("SELECT * FROM authors LEFT JOIN articles ON articles.author_id = authors.id WHERE articles.published_date BETWEEN date('now', '-100 day') AND date('now') ORDER BY published_date DESC");
+
+$articles = $getArticles->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -29,16 +32,18 @@ $sortedArticles = sortArticles($articles);
 
             <div class="contentBox">
 
-                <?php foreach ($sortedArticles as $article): ?>
+                <?php foreach ($articles as $article): ?>
 
                     <?php
                         $title = $article['title'];
                         $content = $article['content'];
-                        $authorId = $article['author_id'];
-                        $publishedDate = $article['published_date'];
+                        $publishedDate = formatDate($article['published_date']);
+                        $publishedDaysAgo = formatToDaysAgo($article['published_date']);
                         $likes = $article['likes'];
-                        $image = $article['image'];
-                        $imageText = $article['image_text'];
+                        $articleImage = $article['image'];
+                        $articleImageText = $article['image_text'];
+                        $authorName = $article['full_name'];
+                        $authorImage = $article['profile_picture'];
                     ?>
 
                     <article>
@@ -47,7 +52,7 @@ $sortedArticles = sortArticles($articles);
 
                         <div class="articleInfoBox">
 
-                            <p class="published">Published <?php echo formatToDaysAgo($publishedDate) ?></p>
+                            <p class="published">Published <?php echo $publishedDaysAgo; ?></p>
 
                             <div class="likeBox">
 
@@ -59,9 +64,9 @@ $sortedArticles = sortArticles($articles);
 
                         </div>
 
-                        <div class="articleImage" style="background-image: url(<?php echo $image?>)"></div>
+                        <div class="articleImage" style="background-image: url(<?php echo $articleImage; ?>)"></div>
 
-                        <p class="imageText"><?php echo $imageText; ?></p>
+                        <p class="imageText"><?php echo $articleImageText; ?></p>
 
                         <p class="articleContent"><?php echo $content; ?></p>
 
@@ -69,13 +74,13 @@ $sortedArticles = sortArticles($articles);
 
                             <div class="authorBox">
 
-                                <img class="profilePicture" src="<?php echo getAuthorImageFromId($authorId, $authors) ?>" alt="Image of author">
+                                <img class="profilePicture" src="<?php echo $authorImage; ?>" alt="Image of author">
 
-                                <p>Author: <?php echo getAuthorNameFromId($authorId, $authors); ?></p>
+                                <p>Author: <?php echo $authorName; ?></p>
 
                             </div>
 
-                            <p class="date"><?php echo formatDate($publishedDate); ?></p>
+                            <p class="date"><?php echo $publishedDate; ?></p>
 
                         </div>
 
