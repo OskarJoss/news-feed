@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Formats date to days ago, 0 returns 'today', 1 returns 'yesterday', the rest return 'X days ago'.
  *
