@@ -4,9 +4,9 @@ require __DIR__.'/functions.php';
 
 $pdo = new PDO('sqlite:newsfeed.db');
 
-$getArticles = $pdo->query("SELECT * FROM authors LEFT JOIN articles ON articles.author_id = authors.id WHERE articles.published_date BETWEEN date('now', '-100 day') AND date('now') ORDER BY published_date DESC");
+$articlesQuery = $pdo->query("SELECT * FROM authors LEFT JOIN articles ON articles.author_id = authors.id WHERE articles.published_date BETWEEN date('now', '-100 day') AND date('now') ORDER BY published_date DESC");
 
-$articles = $getArticles->fetchAll(PDO::FETCH_ASSOC);
+$articles = $articlesQuery->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
